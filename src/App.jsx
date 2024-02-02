@@ -10,13 +10,9 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 function App() {
   return (
     <div>
-      <Navbar />
-      {/* <Home />
-      <About />
-      <Project />
-      <Contact /> */}
       <div>
-        <Router>
+        <Router basename={'/'}>
+          <Navbar />          
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -26,7 +22,6 @@ function App() {
         </Router>
       </div>
     </div>
-
   )
 }
 
